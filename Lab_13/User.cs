@@ -14,8 +14,7 @@ namespace Lab_13
         }
         public override int GenerateRoshambo()
         {
-            Console.WriteLine("Enter: ");
-            Choice = Convert.ToInt32(Console.ReadLine());
+            Choice = Validator.UserChoice();            
             return Choice;
         }
     }

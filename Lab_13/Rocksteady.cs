@@ -14,7 +14,8 @@ namespace Lab_13
 
         public override int GenerateRoshambo()
         {
-            return (int)Roshambo.Rock;
+            int choice = (int)Roshambo.Rock;
+            return choice;
         }
 
         public override string ToString()

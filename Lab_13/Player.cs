@@ -16,15 +16,14 @@ namespace Lab_13
 
         public Player (string name)
         {
-            Name = name;
-            
+            Name = name;            
         }        
 
         public abstract int GenerateRoshambo();
 
         public override string ToString()
         {
-            return $"{name}: ";
+            return $"{name}";
         }
 
     }

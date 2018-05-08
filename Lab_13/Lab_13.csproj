@@ -49,6 +49,7 @@
     <Compile Include="Roshambo.cs" />
     <Compile Include="RoshamboApp.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -8,7 +8,7 @@ namespace Lab_13
 {
     enum Roshambo
     {
-        Rock, Paper, Scissors
+        Rock, Scissors, Paper
     }      
 
     
