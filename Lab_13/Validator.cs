@@ -13,11 +13,11 @@ namespace Lab_13
             while (true)
             {
                 Console.WriteLine();
-                Console.Write("Enter Rock (r), Paper (p), or Scissors (s): ");
-                Console.WriteLine();
+                Console.Write("Enter Rock (r), Paper (p), or Scissors (s): ");                
                 string input = Console.ReadLine().ToLower();
                 if ((input != "r") && (input != "p") && (input != "s"))
                 {
+                    Console.WriteLine();
                     Console.Write("Invalid entry. Enter \"r,\" \"p,\" or \"s.\"");
                     input = Console.ReadLine();
                 }
@@ -74,20 +74,42 @@ namespace Lab_13
         }
         public static void Referee(Player p1, Player p2)
         {
-
-            //Console.WriteLine(p1);
-            //Console.WriteLine(p2);
             if (p1.Choice == p2.Choice)
             {
+                Console.WriteLine();
                 Console.WriteLine("Draw");
             }
             else if ((p1.Choice == (Roshambo)0) && (p2.Choice == (Roshambo)1) || (p1.Choice == (Roshambo)1) && (p2.Choice == (Roshambo)2) || (p1.Choice == (Roshambo)2 && p2.Choice == (Roshambo)0))
             {
+                Console.WriteLine();
                 Console.WriteLine($"{p1.Name} wins!");
             }
             else
             {
+                Console.WriteLine();
                 Console.WriteLine($"{p2.Name} wins!");
+            }
+        }
+
+        public static bool DoAgain()
+        {
+            Console.Write("Would you like to play again? (y/n): ");
+            string response = Console.ReadLine().ToLower();
+            while (true)
+            {
+                if (response != "n" && response != "y")
+                {
+                    Console.Write("Invalid entry (y/n): ");
+                    response = Console.ReadLine();
+                }
+                else if (response == "y")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
 
