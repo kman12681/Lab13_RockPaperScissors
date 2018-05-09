@@ -9,21 +9,22 @@ namespace Lab_13
     abstract class Player
     {
         private string name;
-        private int choice;
+        private Roshambo choice;
 
         public string Name { get => name; set => name = value; }
-        public int Choice { get => choice; set => choice = value; }
+        public Roshambo Choice { get => choice; set => choice = value; }
+        
 
         public Player (string name)
         {
-            Name = name;            
+            this.Name = name;            
         }        
 
-        public abstract int GenerateRoshambo();
+        public abstract Roshambo GenerateRoshambo();
 
         public override string ToString()
         {
-            return $"{name}";
+             return $"{Name}: {Choice} ";
         }
 
     }

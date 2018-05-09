@@ -7,15 +7,18 @@ using System.Threading.Tasks;
 namespace Lab_13
 {
     class User : Player
-    {    
-       
-      public User (string name) : base(name)
+    {
+        public User(string name) : base(name)
         {
         }
-        public override int GenerateRoshambo()
+        public override Roshambo GenerateRoshambo()
         {
-            Choice = Validator.UserChoice();            
-            return Choice;
+            return Validator.UserChoice();
         }
+
+        //public override string ToString()
+        //{
+        //    return base.ToString() + $"{Choice}";
+        //}
     }
 }

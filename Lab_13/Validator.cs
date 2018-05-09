@@ -8,8 +8,7 @@ namespace Lab_13
 {
     class Validator
     {
-
-        public static int UserChoice()
+        public static Roshambo UserChoice()
         {
             while (true)
             {
@@ -24,20 +23,20 @@ namespace Lab_13
                 }
                 else if (input == "r")
                 {
-                    return 0;
+                    return Roshambo.Rock;
                 }
                 else if (input == "s")
                 {
-                    return 1;
+                    return Roshambo.Scissors;
                 }
                 else
                 {
-                    return 2;
+                    return Roshambo.Paper;
                 }
             }
         }
 
-        public static bool OpponentChoice(string input)
+        public static string OpponentChoice(string input)
         {
             while (true)
             {
@@ -49,13 +48,12 @@ namespace Lab_13
                 else if (input == "r")
 
                 {
-                    return true;
+                    return "r";
                 }
                 else
                 {
-                    return false;
+                    return "b";
                 }
-                                                 
             }
         }
 
@@ -72,6 +70,24 @@ namespace Lab_13
                 {
                     return input;
                 }
+            }
+        }
+        public static void Referee(Player p1, Player p2)
+        {
+
+            //Console.WriteLine(p1);
+            //Console.WriteLine(p2);
+            if (p1.Choice == p2.Choice)
+            {
+                Console.WriteLine("Draw");
+            }
+            else if ((p1.Choice == (Roshambo)0) && (p2.Choice == (Roshambo)1) || (p1.Choice == (Roshambo)1) && (p2.Choice == (Roshambo)2) || (p1.Choice == (Roshambo)2 && p2.Choice == (Roshambo)0))
+            {
+                Console.WriteLine($"{p1.Name} wins!");
+            }
+            else
+            {
+                Console.WriteLine($"{p2.Name} wins!");
             }
         }
 
