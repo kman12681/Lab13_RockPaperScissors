@@ -12,8 +12,7 @@ namespace Lab_13
         private Roshambo choice;
 
         public string Name { get => name; set => name = value; }
-        public Roshambo Choice { get => choice; set => choice = value; }
-        
+        public Roshambo Choice { get => choice; set => choice = value; }        
 
         public Player (string name)
         {
@@ -26,7 +25,6 @@ namespace Lab_13
         {
              return $"{Name}: {Choice} ";
         }
-
     }
 }
 

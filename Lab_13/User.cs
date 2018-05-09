@@ -14,11 +14,6 @@ namespace Lab_13
         public override Roshambo GenerateRoshambo()
         {
             return Validator.UserChoice();
-        }
-
-        //public override string ToString()
-        //{
-        //    return base.ToString() + $"{Choice}";
-        //}
+        }        
     }
 }

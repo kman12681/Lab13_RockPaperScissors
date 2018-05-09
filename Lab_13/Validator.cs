@@ -72,22 +72,18 @@ namespace Lab_13
                 }
             }
         }
-        public static void Referee(Player p1, Player p2)
+        public static string Referee(Player p1, Player p2)
         {
-            if (p1.Choice == p2.Choice)
+            
+            if ((p1.Choice == (Roshambo)0) && (p2.Choice == (Roshambo)1) || (p1.Choice == (Roshambo)1) && (p2.Choice == (Roshambo)2) || (p1.Choice == (Roshambo)2 && p2.Choice == (Roshambo)0))
             {
                 Console.WriteLine();
-                Console.WriteLine("Draw");
-            }
-            else if ((p1.Choice == (Roshambo)0) && (p2.Choice == (Roshambo)1) || (p1.Choice == (Roshambo)1) && (p2.Choice == (Roshambo)2) || (p1.Choice == (Roshambo)2 && p2.Choice == (Roshambo)0))
-            {
-                Console.WriteLine();
-                Console.WriteLine($"{p1.Name} wins!");
+                return p1.Name;                
             }
             else
             {
                 Console.WriteLine();
-                Console.WriteLine($"{p2.Name} wins!");
+                return p2.Name;
             }
         }
 
