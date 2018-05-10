@@ -8,10 +8,10 @@ namespace Lab_13
 {
     class RoshamboApp
     {
-        static void Main(string[] args)
+        public static void PRS()
         {
             int countu = 0, countb = 0, countr = 0, countud = 0, countrd = 0, countbd = 0,
-                countul = 0, countbl = 0, countrl = 0;            
+                countul = 0, countbl = 0, countrl = 0;
 
             Console.WriteLine("Rock. PAPER. SCISSORS!!");
 
@@ -92,12 +92,12 @@ namespace Lab_13
                             countb++;
                             countu++;
                         }
-                    }                 
+                    }
                 }
 
                 Console.WriteLine();
                 whileBool = Validator.DoAgain();
-            }           
+            }
 
             Console.WriteLine();
             Console.WriteLine();
