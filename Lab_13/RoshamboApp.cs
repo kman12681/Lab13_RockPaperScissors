@@ -92,8 +92,7 @@ namespace Lab_13
                             countb++;
                             countu++;
                         }
-                    }                   
-
+                    }                 
                 }
 
                 Console.WriteLine();
