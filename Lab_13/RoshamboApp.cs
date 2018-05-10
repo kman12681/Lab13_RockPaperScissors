@@ -10,9 +10,8 @@ namespace Lab_13
     {
         static void Main(string[] args)
         {
-            int countu = 0;
-            int countb = 0;
-            int countr = 0;
+            int countu = 0, countb = 0, countr = 0, countud = 0, countrd = 0, countbd = 0,
+                countul = 0, countbl = 0, countrl = 0;            
 
             Console.WriteLine("Rock. PAPER. SCISSORS!!");
 
@@ -30,7 +29,9 @@ namespace Lab_13
                 Console.WriteLine();
                 Console.Write("Would you like to play against Bebop (b) or Rocksteady (r)?: ");
 
+
                 if (Validator.OpponentChoice(Console.ReadLine()) == "r")
+
                 {
                     Rocksteady r = new Rocksteady("Rocksteady");
                     user.Choice = user.GenerateRoshambo();
@@ -43,6 +44,8 @@ namespace Lab_13
                     {
                         Console.WriteLine();
                         Console.WriteLine("Draw!");
+                        countud++;
+                        countrd++;
                     }
                     else
                     {
@@ -52,10 +55,12 @@ namespace Lab_13
                         if (winner == user.Name)
                         {
                             countu++;
+                            countrl++;
                         }
                         else if (winner == r.Name)
                         {
                             countr++;
+                            countul++;
                         }
                     }
                 }
@@ -71,6 +76,8 @@ namespace Lab_13
                     {
                         Console.WriteLine();
                         Console.WriteLine("Draw!");
+                        countud++;
+                        countbd++;
                     }
                     else
                     {
@@ -79,27 +86,45 @@ namespace Lab_13
                         if (winner == user.Name)
                         {
                             countu++;
+                            countbl++;
                         }
                         else if (winner == b.Name)
                         {
                             countb++;
+                            countu++;
                         }
-                    }
+                    }                   
+
                 }
 
                 Console.WriteLine();
                 whileBool = Validator.DoAgain();
-            }
+            }           
+
             Console.WriteLine();
-            Console.WriteLine("Final Results: ");
+            Console.WriteLine("               Final Results                 ");
+            Console.WriteLine("---------------------------------------------");
             Console.WriteLine();
-            Console.WriteLine($"{user.Name}: {countu} win(s)");
-            Console.WriteLine($"{rocksteady.Name}: {countr} win(s)");
-            Console.WriteLine($"{bebop.Name}: {countb} win(s)");
+            Console.WriteLine("Wins\tLosses\tDraws\tPlayer");
+            Console.WriteLine();
+            Console.WriteLine($"{countu}\t{countul}\t{countud}\t{user.Name}");
+            Console.WriteLine($"{countr}\t{countrl}\t{countrd}\t{rocksteady.Name}");
+            Console.WriteLine($"{countb}\t{countbl}\t{countbd}\t{bebop.Name}");
+            Console.WriteLine("---------------------------------------------");
             Console.WriteLine();
             Console.WriteLine("This game will now end.\n\nGoodbye!");
             Console.ReadLine();
+
         }
+
+
+
     }
+
+
+
+
 }
+
+
 

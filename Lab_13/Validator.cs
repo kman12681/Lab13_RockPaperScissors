@@ -70,6 +70,7 @@ namespace Lab_13
                 {
                     return input;
                 }
+
             }
         }
         public static string Referee(Player p1, Player p2)
@@ -85,15 +86,15 @@ namespace Lab_13
                 Console.WriteLine();
                 return p2.Name;
             }
-        }
+        }        
 
         public static bool DoAgain()
         {
-            Console.Write("Would you like to play again? (y/n): ");
+            Console.Write($"Would you like to play again? (y/n): ");
             string response = Console.ReadLine().ToLower();
             while (true)
             {
-                if (response != "n" && response != "y")
+                if (response != "y" && response != "n")
                 {
                     Console.Write("Invalid entry (y/n): ");
                     response = Console.ReadLine();
