@@ -70,9 +70,9 @@ namespace Lab_13
                 {
                     return input;
                 }
-
             }
         }
+
         public static string Referee(Player p1, Player p2)
         {
             
@@ -109,6 +109,5 @@ namespace Lab_13
                 }
             }
         }
-
     }
 }

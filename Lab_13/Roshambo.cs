@@ -9,7 +9,6 @@ namespace Lab_13
     enum Roshambo
     {
         Rock, Scissors, Paper
-    }      
-
+    }     
     
 }

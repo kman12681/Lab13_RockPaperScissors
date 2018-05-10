@@ -29,7 +29,6 @@ namespace Lab_13
                 Console.WriteLine();
                 Console.Write("Would you like to play against Bebop (b) or Rocksteady (r)?: ");
 
-
                 if (Validator.OpponentChoice(Console.ReadLine()) == "r")
 
                 {
@@ -102,7 +101,8 @@ namespace Lab_13
             }           
 
             Console.WriteLine();
-            Console.WriteLine("               Final Results                 ");
+            Console.WriteLine();
+            Console.WriteLine("               FINAL RESULTS                 ");
             Console.WriteLine("---------------------------------------------");
             Console.WriteLine();
             Console.WriteLine("Wins\tLosses\tDraws\tPlayer");
@@ -110,20 +110,13 @@ namespace Lab_13
             Console.WriteLine($"{countu}\t{countul}\t{countud}\t{user.Name}");
             Console.WriteLine($"{countr}\t{countrl}\t{countrd}\t{rocksteady.Name}");
             Console.WriteLine($"{countb}\t{countbl}\t{countbd}\t{bebop.Name}");
+            Console.WriteLine();
             Console.WriteLine("---------------------------------------------");
             Console.WriteLine();
             Console.WriteLine("This game will now end.\n\nGoodbye!");
             Console.ReadLine();
-
         }
-
-
-
     }
-
-
-
-
 }
 
 

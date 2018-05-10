@@ -16,7 +16,6 @@ namespace Lab_13
         {
             return Roshambo.Rock;
         }
-
     }
 }
 
