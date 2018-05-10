@@ -13,8 +13,7 @@ namespace Lab_13
         }
 
         public override Roshambo GenerateRoshambo()
-        {
-            Array values = Enum.GetValues(typeof(Roshambo));
+        {            
             Random random = new Random();
             return (Roshambo)random.Next(0, 3);
         }
